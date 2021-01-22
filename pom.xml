@@ -13,21 +13,22 @@
     <maven.compiler.source>6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-      <scm>
-        <connection>scm:git:https://github.com/zforman/test_maven.git</connection>
-        <developerConnection>scm:git:https://github.com/zforman/test_maven.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>https://github.com/zforman/test_maven.git</url>
-      </scm>
     </dependency>
   </dependencies>
+
+  <scm>
+    <connection>scm:git:https://github.com/zforman/test_maven.git</connection>
+    <developerConnection>scm:git:https://github.com/zforman/test_maven.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://github.com/zforman/test_maven.git</url>
+  </scm>
 
   <build>
 
