@@ -54,7 +54,7 @@
               <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
             </manifest>
             <manifestEntries>
-              <Implementation-Version>${project.version}-${buildNumber}</Implementation-Version>
+              <Implementation-Version>${project.version}-a-${buildNumber}</Implementation-Version>
               <Implementation-Build>${scmBranch}</Implementation-Build>
               <Main-Class>com.devopslab.App</Main-Class>
             </manifestEntries>
