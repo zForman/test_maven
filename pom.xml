@@ -42,18 +42,22 @@
     </resources>
 
     <plugins>
+
       <plugin>
-        <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
+        <version>2.3.1</version>
         <configuration>
           <archive>
             <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.devopslab.App</mainClass>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
             </manifest>
+            <manifestEntries>
+              <Implementation-Version>${project.version}-${buildNumber}</Implementation-Version>
+              <Implementation-Build>${scmBranch}</Implementation-Build>
+              <Main-Class>com.devopslab.App</Main-Class>
+            </manifestEntries>
           </archive>
         </configuration>
       </plugin>
