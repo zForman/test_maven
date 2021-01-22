@@ -14,7 +14,7 @@
   <properties>
     <maven.compiler.source>6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
-    <jar.finalName>${project.artifactId}-${project.version}-${buildNumber}</jar.finalName>
+    <!-- <jar.finalName>${project.artifactId}-${project.version}-${buildNumber}</jar.finalName> -->
 
   </properties>
 
@@ -88,11 +88,12 @@
               <Main-Class>com.devopslab.App</Main-Class>
             </manifestEntries>
           </archive>
+          <finalName>${project.artifactId}-${project.version}-${buildNumber}</finalName>
         </configuration>
       </plugin>
 
     </plugins>
-    <finalName>${project.artifactId}-${project.version}-${buildNumber}</finalName>
+
   </build>
 
   <!-- <distributionManagement>
