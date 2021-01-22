@@ -1,25 +1,43 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>epam.school.devops</groupId>
-  <artifactId>epam-devops-app</artifactId>
+  <artifactId>EpamDevOpsApp</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>my-app</name>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>epam-lab-app</name>
+
   <url>http://maven.apache.org</url>
   <properties>
     <maven.compiler.source>6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+      <scm>
+        <connection>scm:git:https://github.com/zforman/test_maven.git</connection>
+        <developerConnection>scm:git:https://github.com/zforman/test_maven.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/zforman/test_maven.git</url>
+      </scm>
     </dependency>
   </dependencies>
+
   <build>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
@@ -37,6 +55,35 @@
         </configuration>
       </plugin>
     </plugins>
-  <finalName>${project.artifactId}-${project.version}</finalName>
+
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>buildnumber-maven-plugin</artifactId>
+      <version>1.4</version>
+      <executions>
+        <execution>
+          <phase>validate</phase>
+          <goals>
+            <goal>create</goal>
+          </goals>
+        </execution>
+      </executions>
+      <configuration>
+        <doCheck>false</doCheck>
+        <doUpdate>false</doUpdate>
+      </configuration>
+    </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-scm-plugin</artifactId>
+      <version>1.11.2</version>
+      <configuration>
+        <connectionType>connection</connectionType>
+      </configuration>
+    </plugin>
+
+    <!-- <finalName>${project.artifactId}-${project.version}</finalName> -->
   </build>
+
 </project>

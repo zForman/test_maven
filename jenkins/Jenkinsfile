@@ -26,9 +26,9 @@ pipeline {
         //         }
         //     }
         // }
-        // stage('Deliver') {
-        //     steps {
-        //         sh "echo 'Delivery stage'"
-        //     }
-        // }
+        stage('Deliver') {
+            steps {
+                echo 'Delivery stage'
+            }
+        }
     }
