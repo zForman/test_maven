@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>epam.school.devops</groupId>
@@ -30,7 +29,7 @@
   <scm>
     <connection>scm:git:https://github.com/zforman/test_maven.git</connection>
     <developerConnection>scm:git:https://github.com/zforman/test_maven.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>EpamDevOpsApp:-0.1.x</tag>
     <url>https://github.com/zforman/test_maven.git</url>
   </scm>
 
