@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>epam.school.devops</groupId>
   <artifactId>EpamDevOpsApp</artifactId>
   <packaging>jar</packaging>
   <version>${revision}</version>
+
 
   <name>epam-lab-app</name>
 
@@ -30,7 +30,7 @@
   <scm>
     <connection>scm:git:https://github.com/zforman/test_maven.git</connection>
     <developerConnection>scm:git:https://github.com/zforman/test_maven.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>hotfix-0000.2</tag>
     <url>https://github.com/zforman/test_maven.git</url>
   </scm>
 
@@ -44,6 +44,18 @@
     </resources>
 
     <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagBase>https://github.com/zForman/test_maven/tags</tagBase>
+          <branchBase>https://github.com/zForman/test_maven/branches</branchBase>
+          <preparationGoals>clean install</preparationGoals>
+          <goals>deploy</goals>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
