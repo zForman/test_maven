@@ -26,7 +26,7 @@ pipeline {
                     nexusArtifactUploader artifacts: [
                             [artifactId: "${ArtifactId}",
                              classifier: '',
-                             file      : "target/${ArtifactId}-${Version}.war",
+                             file      : "target/${ArtifactId}-${Version}.jar",
                              type      : 'war'
                             ]
                     ],
