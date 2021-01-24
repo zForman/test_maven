@@ -22,7 +22,6 @@ pipeline {
             steps {
                 script {
                     echo "ArtifactId === ${GIT_BRANCH}"
-                    echo "release-version === ${jx-release-version}"
 //                    def nexusRepoName = Version.endWith('SNAPSHOT') ? 'SimpleJavaMavenApp-SNAPSHOT' : 'SimpleJavaMavenApp-RELEASE'
 //                    nexusArtifactUploader artifacts:[
 //                        [
