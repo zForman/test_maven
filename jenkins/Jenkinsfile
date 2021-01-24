@@ -21,7 +21,9 @@ pipeline {
         stage('Publish Jar to Nexus Repository') {
             steps {
                 script {
+
                     echo "GIT_BRANCH === ${GIT_BRANCH}"
+
 //                    def nexusRepoName = Version.endWith('SNAPSHOT') ? 'SimpleJavaMavenApp-SNAPSHOT' : 'SimpleJavaMavenApp-RELEASE'
 //                    nexusArtifactUploader artifacts:[
 //                        [
